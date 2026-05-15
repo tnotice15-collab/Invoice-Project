@@ -1,0 +1,67 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Invoice Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="invoice">
+  <header>
+    <div>
+      <h1>Your Company Name</h1>
+      <p>123 Business Street<br>Bronx, NY<br>email@example.com</p>
+    </div>
+
+    <div class="invoice-info">
+      <h2>INVOICE</h2>
+      <p>Invoice #: <input type="text"></p>
+      <p>Date: <input type="date"></p>
+    </div>
+  </header>
+
+  <section class="details">
+    <div>
+      <h3>Bill To</h3>
+      <input type="text" placeholder="Customer Name">
+      <input type="text" placeholder="Customer Address">
+    </div>
+
+    <div>
+      <h3>For</h3>
+      <input type="text" placeholder="Service or Project">
+    </div>
+  </section>
+
+  <table>
+    <tr>
+      <th>Description</th>
+      <th>Qty</th>
+      <th>Price</th>
+      <th>Total</th>
+    </tr>
+
+    <tr>
+      <td><input type="text" placeholder="Item description"></td>
+      <td><input type="number" id="qty" oninput="calculateTotal()"></td>
+      <td><input type="number" id="price" oninput="calculateTotal()"></td>
+      <td>$<span id="itemTotal">0.00</span></td>
+    </tr>
+  </table>
+
+  <section class="totals">
+    <p>Subtotal: $<span id="subtotal">0.00</span></p>
+    <p>Tax: $<span id="tax">0.00</span></p>
+    <h3>Total: $<span id="grandTotal">0.00</span></h3>
+  </section>
+
+  <footer>
+    <p>Thank you for your business!</p>
+    <p>Please contact us with any questions about this invoice.</p>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
